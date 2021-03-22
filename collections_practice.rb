@@ -1,5 +1,5 @@
 def sort_array_asc(array)
-  array.sort{|a,b|a <=> b}
+  array.sort
 end
 
 def sort_array_desc(array)
@@ -11,9 +11,13 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
-  array.sort {array[1], array[2] = array[2], array[1]}
+  position2 = array[1]
+  position3 = array[2] 
+  array[1] = position3
+  array[2] = position2
+  array
 end
 
 def reverse_array(array)
-  array.sort_by.reverse
+  array.sort_by.reverse {|i|}
 end
