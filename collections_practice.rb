@@ -37,3 +37,7 @@ end
 def sum_array(array)
   array.inject(:+)
 end
+
+def add_s(array)
+  array.each {|string| string << "s" unless string == array[1]}
+end
